@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2019-06-12T09:24:06.237Z</updated>
+    <updated>2019-06-12T09:26:26.652Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -34,8 +34,7 @@
         <link href="https://easy-go-ing.github.io/post/sort-tab">
         </link>
         <updated>2019-06-12T09:05:02.000Z</updated>
-        <content type="html"><![CDATA[<p>指定tab为分隔符
-tab的输入</p>
+        <content type="html"><![CDATA[<p>指定tab为分隔符，tab的输入</p>
 <pre><code>$ sort -t '&lt;tab&gt;'  # tab的输入方法：Ctrl-v-i
 $ sort -t $'\t' inputfile -o outfile  # 也可以用$'&lt;backslash-code&gt;'语法
 </code></pre>
