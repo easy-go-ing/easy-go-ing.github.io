@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2019-06-12T09:50:00.159Z</updated>
+    <updated>2019-06-12T09:51:58.180Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -154,13 +154,13 @@ pprint(dict_to_etree(d))
         <updated>2019-06-12T09:23:17.000Z</updated>
         <content type="html"><![CDATA[<p>多字段排序：
 以:为分隔符，对第3字段以数字方式，第6字段以数字方式排序</p>
-<pre><code>$ sort -t: +2n -3 +5n -6
+<pre><code class="language-bash">$ sort -t: +2n -3 +5n -6
 </code></pre>
 <p>说明：</p>
 <p>指定第m个字段的方法是： +(m-1) -m
 字段后跟n表示数字序,r表示倒序
 根据第1字段默认，第5字段倒序进行排序</p>
-<pre><code>$ sort +0 -1 +4nr -5 d
+<pre><code class="language-bash">$ sort +0 -1 +4nr -5 d
 </code></pre>
 ]]></content>
     </entry>
