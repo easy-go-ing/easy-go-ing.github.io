@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://eg.github.io</id>
+    <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2019-06-12T08:43:37.456Z</updated>
+    <updated>2019-06-12T09:00:40.883Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://eg.github.io"/>
-    <link rel="self" href="https://eg.github.io/atom.xml"/>
+    <link rel="alternate" href="https://easy-go-ing.github.io"/>
+    <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
     <subtitle>Take it easy !!</subtitle>
-    <logo>https://eg.github.io/images/avatar.png</logo>
-    <icon>https://eg.github.io/favicon.ico</icon>
+    <logo>https://easy-go-ing.github.io/images/avatar.png</logo>
+    <icon>https://easy-go-ing.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Easy Going</rights>
     <entry>
         <title type="html"><![CDATA[find more path in one command]]></title>
-        <id>https://eg.github.io/post/find-more-path-in-one-command</id>
-        <link href="https://eg.github.io/post/find-more-path-in-one-command">
+        <id>https://easy-go-ing.github.io/post/find-more-path-in-one-command</id>
+        <link href="https://easy-go-ing.github.io/post/find-more-path-in-one-command">
         </link>
         <updated>2019-06-12T08:40:35.000Z</updated>
         <content type="html"><![CDATA[<pre><code>$ find /path1 /path2 -type f -name &quot;*&quot;
@@ -22,8 +22,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://eg.github.io/post/hello-gridea</id>
-        <link href="https://eg.github.io/post/hello-gridea">
+        <id>https://easy-go-ing.github.io/post/hello-gridea</id>
+        <link href="https://easy-go-ing.github.io/post/hello-gridea">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
