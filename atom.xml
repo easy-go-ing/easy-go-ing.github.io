@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2019-06-12T10:12:31.408Z</updated>
+    <updated>2019-06-13T02:48:22.153Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -10,6 +10,71 @@
     <logo>https://easy-go-ing.github.io/images/avatar.png</logo>
     <icon>https://easy-go-ing.github.io/favicon.ico</icon>
     <rights>All rights reserved 2019, Easy Going</rights>
+    <entry>
+        <title type="html"><![CDATA[python string to timestamp & timestamp to string]]></title>
+        <id>https://easy-go-ing.github.io/post/python-string-to-timestamp-and-timestamp-to-string</id>
+        <link href="https://easy-go-ing.github.io/post/python-string-to-timestamp-and-timestamp-to-string">
+        </link>
+        <updated>2019-06-13T02:43:46.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="string-2-timestamp">string 2 timestamp</h3>
+<ol>
+<li>先将string转换成time_struct</li>
+<li>再将time_struct转换成timestamp</li>
+</ol>
+<h3 id="timestamp-2-string">timestamp 2 string</h3>
+<ol>
+<li>先将timestamp转换成time_struct</li>
+<li>再将time_struct转换成string</li>
+</ol>
+<p>PS.无论哪种转换，都需要先转换成time_struct</p>
+<pre><code class="language-python">import time
+def str2timestamp(s,f='%Y%m%d%H%M%S'):
+    return int(time.mktime(time.strptime(s,f)))
+def timestamp2str(t,f='%Y-%m-%d %H:%M:%S'):
+    return time.strftime(f,time.localtime(t))
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[python 离线安装easy_install和pip]]></title>
+        <id>https://easy-go-ing.github.io/post/python-chi-xian-an-zhuang-easy_install-he-pip</id>
+        <link href="https://easy-go-ing.github.io/post/python-chi-xian-an-zhuang-easy_install-he-pip">
+        </link>
+        <updated>2019-06-13T02:38:15.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>先安装easy_install
+下载源码包:https://pypi.python.org/pypi/ez_setup 解压，安装</li>
+</ol>
+<pre><code class="language-bash">$ python ez_setup.py
+</code></pre>
+<ol>
+<li>再安装pip
+下载源码包:https://pypi.python.org/pypi/pip 解压，安装</li>
+</ol>
+<pre><code class="language-bash">$ python setup.py install
+</code></pre>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[install c/c++ dev env]]></title>
+        <id>https://easy-go-ing.github.io/post/install-cc-dev-env</id>
+        <link href="https://easy-go-ing.github.io/post/install-cc-dev-env">
+        </link>
+        <updated>2019-06-13T02:35:39.000Z</updated>
+        <content type="html"><![CDATA[<h4 id="安装gnu的cc开发包和编译器">安装GNU的C/C++开发包和编译器</h4>
+<ul>
+<li>for: Fedora, Red Hat, CentOS, Scientific Linux</li>
+</ul>
+<pre><code class="language-bash">$ yum groupinstall 'Development Tools'
+</code></pre>
+<ul>
+<li>for: Debian, Ubuntu Linux</li>
+</ul>
+<pre><code>$ sudo apt-get update
+$ sudo apt-get install build-essential manpages-dev
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[xml to json & json to xml (just with standard library)]]></title>
         <id>https://easy-go-ing.github.io/post/xml-to-json-and-json-to-xml-just-with-standard-library</id>
@@ -184,6 +249,6 @@ $ sort -t $'\t' inputfile -o outfile  # 也可以用$'&lt;backslash-code&gt;'语
         <updated>2019-06-12T08:40:35.000Z</updated>
         <content type="html"><![CDATA[<pre><code class="language-bash">$ find /path1 /path2 -type f -name &quot;*&quot;
 </code></pre>
-]]></content>
+<!-- more -->]]></content>
     </entry>
 </feed>
