@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2019-06-13T03:02:02.276Z</updated>
+    <updated>2019-06-13T03:04:53.526Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -33,7 +33,7 @@ def str2timestamp(s,f='%Y%m%d%H%M%S'):
 def timestamp2str(t,f='%Y-%m-%d %H:%M:%S'):
     return time.strftime(f,time.localtime(t))
 </code></pre>
-]]></content>
+<!-- more --> ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[python 离线安装easy_install和pip]]></title>
@@ -53,7 +53,7 @@ def timestamp2str(t,f='%Y-%m-%d %H:%M:%S'):
 </ol>
 <pre><code class="language-bash">$ python setup.py install
 </code></pre>
-]]></content>
+<!-- more --> ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[install c/c++ dev env]]></title>
@@ -73,7 +73,7 @@ def timestamp2str(t,f='%Y-%m-%d %H:%M:%S'):
 <pre><code class="language-bash">$ sudo apt-get update
 $ sudo apt-get install build-essential manpages-dev
 </code></pre>
-]]></content>
+<!-- more --> ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[xml to json & json to xml (just with standard library)]]></title>
@@ -81,7 +81,15 @@ $ sudo apt-get install build-essential manpages-dev
         <link href="https://easy-go-ing.github.io/post/xml-to-json-and-json-to-xml-just-with-standard-library">
         </link>
         <updated>2019-06-12T09:33:37.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="xml-to-json-python26">xml to json (python&gt;2.6)</h4>
+        <summary type="html"><![CDATA[<p>xml to json (python&gt;2.6)
+json to xml  (python&gt;2.6)
+xml to json (python&gt;2.6, kv in json order by xml)</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>xml to json (python&gt;2.6)
+json to xml  (python&gt;2.6)
+xml to json (python&gt;2.6, kv in json order by xml)</p>
+<!-- more -->
+<h4 id="xml-to-json-python26">xml to json (python&gt;2.6)</h4>
 <ul>
 <li>定义转换方法</li>
 </ul>
@@ -227,7 +235,7 @@ pprint(dict_to_etree(d))
 根据第1字段默认，第5字段倒序进行排序</p>
 <pre><code class="language-bash">$ sort +0 -1 +4nr -5 d
 </code></pre>
-]]></content>
+<!-- more -->]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[sort tab]]></title>
@@ -239,7 +247,7 @@ pprint(dict_to_etree(d))
 <pre><code class="language-bash">$ sort -t '&lt;tab&gt;'  # tab的输入方法：Ctrl-v-i
 $ sort -t $'\t' inputfile -o outfile  # 也可以用$'&lt;backslash-code&gt;'语法
 </code></pre>
-]]></content>
+<!-- more -->]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[find more path in one command]]></title>
@@ -249,6 +257,6 @@ $ sort -t $'\t' inputfile -o outfile  # 也可以用$'&lt;backslash-code&gt;'语
         <updated>2019-06-12T08:40:35.000Z</updated>
         <content type="html"><![CDATA[<pre><code class="language-bash">$ find /path1 /path2 -type f -name &quot;*&quot;
 </code></pre>
-]]></content>
+<!-- more --> ]]></content>
     </entry>
 </feed>
