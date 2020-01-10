@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>TOOLS | Easy Going</title>
+<title>matplotlib error - no module named tkinter | Easy Going</title>
 <link rel="shortcut icon" href="https://easy-go-ing.github.io/favicon.ico?v=1578626084119">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,31 +74,32 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              TOOLS
+              matplotlib error - no module named tkinter
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-10-25 ·
+                · 2020-01-10 ·
               </time>
               
-                <a href="https://easy-go-ing.github.io/tag/MtEabYif_" class="post-tag">
-                  # tools
+                <a href="https://easy-go-ing.github.io/tag/jtQlKM1Vg" class="post-tag">
+                  # python
                 </a>
               
             </div>
             
             <div class="post-content">
-              <h3 id="截图">截图</h3>
-<h4 id="代码截图">代码截图</h4>
-<ol>
-<li><a href="https://carbon.now.sh/">CARBON</a></li>
-</ol>
-<h4 id="端口扫描">端口扫描</h4>
-<ol>
-<li><a href="https://github.com/robertdavidgraham/masscan">Masscan</a></li>
-<li><a href="https://nmap.org/">Nmap</a></li>
-<li><a href="https://github.com/rapid7/metasploit-framework">MSF</a></li>
-</ol>
+              <h3 id="problem">problem</h3>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+ImportError: No module named 'tkinter'
+</code></pre>
+<h4 id="solution-1">solution 1</h4>
+<pre><code class="language-python">import matplotlib
+matplotlib.use('agg')  # agg is a non-GUI backend, so plt.show() will not have any effect. But you can still do plt.savefig(filename) and look at the file for quick debugging.
+import matplotlib.pyplot as plt
+</code></pre>
+<h4 id="solution-2">solution 2</h4>
+<pre><code class="language-shell">yum install tkinter # some thing else and so on
+</code></pre>
 
             </div>
           </article>
@@ -107,9 +108,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://easy-go-ing.github.io/post/tld-list">
+            <a href="https://easy-go-ing.github.io/post/tools">
               <h3 class="post-title">
-                TLD LIST
+                TOOLS
               </h3>
             </a>
           </div>

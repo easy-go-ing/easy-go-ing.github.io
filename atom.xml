@@ -2,14 +2,34 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2019-12-10T03:24:49.863Z</updated>
+    <updated>2020-01-10T03:14:54.490Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
     <subtitle>Take it easy !!</subtitle>
     <logo>https://easy-go-ing.github.io/images/avatar.png</logo>
     <icon>https://easy-go-ing.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, Easy Going</rights>
+    <rights>All rights reserved 2020, Easy Going</rights>
+    <entry>
+        <title type="html"><![CDATA[matplotlib error - no module named tkinter]]></title>
+        <id>https://easy-go-ing.github.io/post/matplotlib-error-no-module-named-tkinter</id>
+        <link href="https://easy-go-ing.github.io/post/matplotlib-error-no-module-named-tkinter">
+        </link>
+        <updated>2020-01-10T03:09:12.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="problem">problem</h3>
+<pre><code class="language-python">import matplotlib.pyplot as plt
+ImportError: No module named 'tkinter'
+</code></pre>
+<h4 id="solution-1">solution 1</h4>
+<pre><code class="language-python">import matplotlib
+matplotlib.use('agg')  # agg is a non-GUI backend, so plt.show() will not have any effect. But you can still do plt.savefig(filename) and look at the file for quick debugging.
+import matplotlib.pyplot as plt
+</code></pre>
+<h4 id="solution-2">solution 2</h4>
+<pre><code class="language-shell">yum install tkinter # some thing else and so on
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[TOOLS]]></title>
         <id>https://easy-go-ing.github.io/post/tools</id>
