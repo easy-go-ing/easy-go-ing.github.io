@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2020-03-16T07:33:34.939Z</updated>
+    <updated>2020-03-23T02:44:34.268Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -10,6 +10,17 @@
     <logo>https://easy-go-ing.github.io/images/avatar.png</logo>
     <icon>https://easy-go-ing.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Easy Going</rights>
+    <entry>
+        <title type="html"><![CDATA[linux 查看进程被killed的情况]]></title>
+        <id>https://easy-go-ing.github.io/post/linux-cha-kan-jin-cheng-bei-killed-de-qing-kuang</id>
+        <link href="https://easy-go-ing.github.io/post/linux-cha-kan-jin-cheng-bei-killed-de-qing-kuang">
+        </link>
+        <updated>2020-03-23T02:43:37.000Z</updated>
+        <content type="html"><![CDATA[<p>dmesg | egrep -i -B100 'killed process'<br>
+egrep -i 'killed process' /var/log/messages<br>
+egrep -i -r 'killed process' /var/log</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[窗外]]></title>
         <id>https://easy-go-ing.github.io/post/chuang-wai</id>
@@ -3427,18 +3438,6 @@ pprint(dict_to_etree(d))
 字段后跟n表示数字序,r表示倒序<br>
 根据第1字段默认，第5字段倒序进行排序</p>
 <pre><code class="language-bash">$ sort +0 -1 +4nr -5 d
-</code></pre>
-<!-- more -->]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sort tab]]></title>
-        <id>https://easy-go-ing.github.io/post/sort-tab</id>
-        <link href="https://easy-go-ing.github.io/post/sort-tab">
-        </link>
-        <updated>2019-06-12T09:05:02.000Z</updated>
-        <content type="html"><![CDATA[<p>指定tab为分隔符，tab的输入</p>
-<pre><code class="language-bash">$ sort -t '&lt;tab&gt;'  # tab的输入方法：Ctrl-v-i
-$ sort -t $'\t' inputfile -o outfile  # 也可以用$'&lt;backslash-code&gt;'语法
 </code></pre>
 <!-- more -->]]></content>
     </entry>

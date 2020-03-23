@@ -1,9 +1,9 @@
 <html>
   <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Easy Going</title>
+<title>linux 查看进程被killed的情况 | Easy Going</title>
 <link rel="shortcut icon" href="https://easy-go-ing.github.io/favicon.ico?v=1584931466540">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -71,29 +71,65 @@
 </div>
 
 
-        <div class="tags-container">
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/PBksPmJXj">site</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/jtQlKM1Vg">python</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/MtEabYif_">tools</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/uGLuBpAeY">domain</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/LUmmrZ8X5">time</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/_Nxz0klr_">pip</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/Jl3PtPZzI">easy_install</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/pQQafAUAF">c</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/azpvCoJL-">c++</a>
-          
-            <a class="tag" href="https://easy-go-ing.github.io/tag/G8dTsCxuX">shell</a>
-          
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              linux 查看进程被killed的情况
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2020-03-23 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p>dmesg | egrep -i -B100 'killed process'<br>
+egrep -i 'killed process' /var/log/messages<br>
+egrep -i -r 'killed process' /var/log</p>
+
+            </div>
+          </article>
         </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://easy-go-ing.github.io/post/chuang-wai">
+              <h3 class="post-title">
+                窗外
+              </h3>
+            </a>
+          </div>
+        
+
+        
+          
+            <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+
+<div id="gitalk-container"></div>
+
+<script>
+
+  var gitalk = new Gitalk({
+    clientID: '36175d96af88614b8f5e',
+    clientSecret: '95edfc60515e2971405016b9212fe3fe87fa500b',
+    repo: 'easy-go-ing.github.io',
+    owner: 'easy-go-ing',
+    admin: ['easy-go-ing'],
+    id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+    distractionFreeMode: false  // Facebook-like distraction free mode
+  })
+
+  gitalk.render('gitalk-container')
+
+</script>
+
+          
+
+          
+        
 
         <div class="site-footer">
   Powered by <a href="https://github.com/easy-go-ing/easy-go-ing.github.io" target="_blank">easy going</a> | 
