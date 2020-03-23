@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2020-03-23T02:49:45.791Z</updated>
+    <updated>2020-03-23T07:55:46.290Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -10,6 +10,52 @@
     <logo>https://easy-go-ing.github.io/images/avatar.png</logo>
     <icon>https://easy-go-ing.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Easy Going</rights>
+    <entry>
+        <title type="html"><![CDATA[nginx 反向代理配置]]></title>
+        <id>https://easy-go-ing.github.io/post/nginx-fan-xiang-dai-li-pei-zhi</id>
+        <link href="https://easy-go-ing.github.io/post/nginx-fan-xiang-dai-li-pei-zhi">
+        </link>
+        <updated>2020-03-23T07:51:37.000Z</updated>
+        <content type="html"><![CDATA[<h3 id="查看实际使用的-nginxconf-路径">查看实际使用的 nginx.conf 路径</h3>
+<pre><code class="language-shell">which nginx
+nginx -t 
+</code></pre>
+<h3 id="反向代理配置">反向代理配置</h3>
+<pre><code class="language-code">upstream dev1 {
+    server 127.0.0.1:9001;
+    server 127.0.0.1:9002;
+}
+
+upstream dev2 {
+    server 127.0.0.1:9003;
+}
+
+server {
+    listen 80;
+    server_name  www.dev1.com;
+    location / {
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_pass http://dev1;
+    }
+}
+
+server {
+    listen 80;
+    server_name  www.dev2.com;
+    location / {
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_pass http://dev2;
+    }
+}
+</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[linux 查看进程被killed的情况]]></title>
         <id>https://easy-go-ing.github.io/post/linux-cha-kan-jin-cheng-bei-killed-de-qing-kuang</id>
@@ -3424,23 +3470,5 @@ pprint(dict_to_etree(d))
 	return d
 </code></pre>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[sort sort by mul field]]></title>
-        <id>https://easy-go-ing.github.io/post/sort-sort-by-mul-field</id>
-        <link href="https://easy-go-ing.github.io/post/sort-sort-by-mul-field">
-        </link>
-        <updated>2019-06-12T09:23:17.000Z</updated>
-        <content type="html"><![CDATA[<p>多字段排序：<br>
-以:为分隔符，对第3字段以数字方式，第6字段以数字方式排序</p>
-<pre><code class="language-bash">$ sort -t: +2n -3 +5n -6
-</code></pre>
-<p>说明：</p>
-<p>指定第m个字段的方法是： +(m-1) -m<br>
-字段后跟n表示数字序,r表示倒序<br>
-根据第1字段默认，第5字段倒序进行排序</p>
-<pre><code class="language-bash">$ sort +0 -1 +4nr -5 d
-</code></pre>
-<!-- more -->]]></content>
     </entry>
 </feed>

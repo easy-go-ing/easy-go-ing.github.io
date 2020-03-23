@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>python 离线安装easy_install和pip | Easy Going</title>
+<title>nginx 反向代理配置 | Easy Going</title>
 <link rel="shortcut icon" href="https://easy-go-ing.github.io/favicon.ico?v=1584950142128">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,41 +74,55 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              python 离线安装easy_install和pip
+              nginx 反向代理配置
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-06-13 ·
+                · 2020-03-23 ·
               </time>
-              
-                <a href="https://easy-go-ing.github.io/tag/_Nxz0klr_" class="post-tag">
-                  # pip
-                </a>
-              
-                <a href="https://easy-go-ing.github.io/tag/Jl3PtPZzI" class="post-tag">
-                  # easy_install
-                </a>
-              
-                <a href="https://easy-go-ing.github.io/tag/jtQlKM1Vg" class="post-tag">
-                  # python
-                </a>
               
             </div>
             
             <div class="post-content">
-              <ol>
-<li>先安装easy_install<br>
-下载源码包:https://pypi.python.org/pypi/ez_setup 解压，安装</li>
-</ol>
-<pre><code class="language-bash">$ python ez_setup.py
+              <h3 id="查看实际使用的-nginxconf-路径">查看实际使用的 nginx.conf 路径</h3>
+<pre><code class="language-shell">which nginx
+nginx -t 
 </code></pre>
-<ol start="2">
-<li>再安装pip<br>
-下载源码包:https://pypi.python.org/pypi/pip 解压，安装</li>
-</ol>
-<pre><code class="language-bash">$ python setup.py install
+<h3 id="反向代理配置">反向代理配置</h3>
+<pre><code class="language-code">upstream dev1 {
+    server 127.0.0.1:9001;
+    server 127.0.0.1:9002;
+}
+
+upstream dev2 {
+    server 127.0.0.1:9003;
+}
+
+server {
+    listen 80;
+    server_name  www.dev1.com;
+    location / {
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_pass http://dev1;
+    }
+}
+
+server {
+    listen 80;
+    server_name  www.dev2.com;
+    location / {
+        proxy_pass_header Server;
+        proxy_set_header Host $http_host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Scheme $scheme;
+        proxy_pass http://dev2;
+    }
+}
 </code></pre>
-<!-- more --> 
+
             </div>
           </article>
         </div>
@@ -116,9 +130,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://easy-go-ing.github.io/post/install-cc-dev-env">
+            <a href="https://easy-go-ing.github.io/post/linux-cha-kan-jin-cheng-bei-killed-de-qing-kuang">
               <h3 class="post-title">
-                install c/c++ dev env
+                linux 查看进程被killed的情况
               </h3>
             </a>
           </div>
