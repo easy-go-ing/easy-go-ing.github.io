@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://easy-go-ing.github.io</id>
     <title>Easy Going</title>
-    <updated>2020-03-23T07:55:46.290Z</updated>
+    <updated>2020-03-31T03:17:00.647Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://easy-go-ing.github.io"/>
     <link rel="self" href="https://easy-go-ing.github.io/atom.xml"/>
@@ -110,28 +110,32 @@ import matplotlib.pyplot as plt
         <link href="https://easy-go-ing.github.io/post/tools">
         </link>
         <updated>2019-10-25T02:07:56.000Z</updated>
-        <content type="html"><![CDATA[<h4 id="代码截图">代码截图</h4>
+        <content type="html"><![CDATA[<h2 id="代码截图">代码截图</h2>
 <ol>
 <li><a href="https://carbon.now.sh/">CARBON</a></li>
 </ol>
-<h4 id="端口扫描">端口扫描</h4>
+<h2 id="端口扫描">端口扫描</h2>
 <ol>
 <li><a href="https://github.com/robertdavidgraham/masscan">Masscan</a></li>
 <li><a href="https://nmap.org/">Nmap</a></li>
 <li><a href="https://github.com/rapid7/metasploit-framework">MSF</a></li>
 </ol>
-<h4 id="pe">PE</h4>
+<h2 id="pe">PE</h2>
 <ol>
 <li><a href="https://www.itsk.com/thread-397875-1-1.html">优启通</a></li>
 </ol>
-<h4 id="u盘启动盘">U盘启动盘</h4>
+<h2 id="u盘启动盘">U盘启动盘</h2>
 <ol>
 <li><a href="https://rufus.ie/">Rufus</a></li>
 </ol>
-<h4 id="win10">WIN10</h4>
+<h2 id="win10">WIN10</h2>
 <ol>
 <li><a href="https://www.microsoft.com/zh-cn/software-download/windows10?OCID=WIP_r_Win10_Body_AddPC">微软官方安装盘制作工具</a></li>
 <li><a href="https://github.com/jm33-m0/kms-activate">Microsoft Windows/Office 一键激活工具，基于kms.jm33.me的KMS服务器</a></li>
+</ol>
+<h2 id="免费图床">免费图床</h2>
+<ol>
+<li><a href="https://sm.ms/">sm.ms</a></li>
 </ol>
 ]]></content>
     </entry>
